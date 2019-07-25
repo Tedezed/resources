@@ -9,11 +9,14 @@ characters = string.printable
 characters_to_encode = string.ascii_letters + string.digits
 
 message = "Hola Mundo!"
-seed_negotiation = "747878JHI46556BFYU7HU74fyh465fbtr7gvVFRETY6HHg"
+internal_seed = "hufdrerthg56ghb6g5445h587"
 key = "sxeunsofvqazcsohutwezaqcqqehklxa"
 password_xor = "67438yrg4yu8g3gfy34ugr7834yurg84t67587hu786hghg76tr57g"
 
-random.seed(seed_negotiation)
+seed_negotiation = "747878JHI46556BFYU7HU74fyh465fbtr7gvVFRETY6HHg"
+
+end_seed = internal_seed + seed_negotiation
+random.seed(end_seed)
 depth=random.randrange(3, 7)
 cipher = AESCipher(key)
 
