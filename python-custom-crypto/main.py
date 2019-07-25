@@ -7,12 +7,14 @@ from plugin_aes import *
 
 characters = string.printable
 characters_to_encode = string.ascii_letters + string.digits
-depth=random.randrange(3, 7)
 
 message = "Hola Mundo!"
+seed_negotiation = "747878JHI46556BFYU7HU74fyh465fbtr7gvVFRETY6HHg"
 key = "sxeunsofvqazcsohutwezaqcqqehklxa"
 password_xor = "67438yrg4yu8g3gfy34ugr7834yurg84t67587hu786hghg76tr57g"
 
+random.seed(seed_negotiation)
+depth=random.randrange(3, 7)
 cipher = AESCipher(key)
 
 def string_recurvive(characters, old_character, depth):
