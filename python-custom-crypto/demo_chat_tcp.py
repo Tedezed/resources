@@ -38,10 +38,13 @@ while llave == 0:
     print("Esperando mensaje...")
     datos = socket_cliente.recv(1000).decode()
     print(datos)
-    normal = mc.mutant_to_normal(datos)
-    decode_message = mc.string_dictionary_decode(normal)
-    print(decode_message)
-
+    try:
+        normal = mc.mutant_to_normal(datos)
+        decode_message = mc.string_dictionary_decode(normal)
+        print(decode_message)
+    except Exception as e:
+        print("ERROR %s" % e)
+    
     mensaje = input('Mensaje: ')
     datos= nameuser + ": " + mensaje
     encode_message = mc.string_dictionary_encode(datos)

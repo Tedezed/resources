@@ -37,3 +37,11 @@ normal = mutant_to_normal(decrypted, password_xor)
 decode_message = string_dictionary_decode(dic_translate, normal)
 print(decode_message)
 ```
+
+```
+# Server
+python3 demo_chat_tcp.py
+
+# Client
+python3 demo_chat_tcp_client.py
+```
