@@ -1,3 +1,8 @@
+
+```
+apt-get install python2.7 python-psutil
+```
+
 ```
 export EMAIL_SEND_TO='user1@gmail.com,user2@gmail.com'
 export EMAIL_MODE='SMTP'
