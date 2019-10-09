@@ -20,7 +20,7 @@ then
 	exit 1
 fi
 
-LIST_TO_COMPRESS=$(find $SOURCEPATH | grep -v "$SOURCEPATH$")
+LIST_TO_COMPRESS=$(find $SOURCEPATH -maxdepth 1 | grep -v "$SOURCEPATH$")
 LEN_DIRECTORY=$(echo $LIST_TO_COMPRESS | wc -w)
 FILES_DIRS_IN_PARTS=$((LEN_DIRECTORY / PARTS))
 
@@ -61,7 +61,7 @@ for ((p=1; p<=$PARTS; p+=1)); do
 		fi
 	done
 	#echo -e "$LIST_IN_PART" | tar -cf - -T - | gzip -cv - > $FILENAME-part$p.tar.gz
-	/bin/bash -c "echo -e "\""$LIST_IN_PART"\"" | tar -cf - -T - | gzip -cv - > $FILENAME-part$p.tar.gz" &
+	nohup /bin/bash -c "echo -e "\""$LIST_IN_PART"\"" | tar -cf - -T - | gzip -cv - > $FILENAME-part$p.tar.gz" &
 	INDEX=$i
 done
 
