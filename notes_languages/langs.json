@@ -1,0 +1,10 @@
+{ "dic_langs" : [
+    {"en": "could", "es": "podrías"},
+    {"en": "each", "es": "cada"},
+    {"en": "to either", "es": "a cualquiera"},
+    {"en": "purposes", "es": "propósitos"},
+    {"en": "also", "es": "también"},
+    {"en": "word", "es": "palabra"}
+  ],
+  "list_langs" : ["en", "es"]
+}
