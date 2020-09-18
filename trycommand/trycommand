@@ -6,9 +6,9 @@ usage ()
 {
 cat <<EOF
 Usage trycommand -s 2 -t 5 -c "echo 'Hello1'; echo 'Hello2'"
-	-s : Sleep time
-	-t : Try number
-	-c : Command to execute
+    -s : Sleep time
+    -t : Try number
+    -c : Command to execute
 EOF
 exit 2
 }
@@ -26,8 +26,8 @@ done
 n=0
 until [ "$n" -ge $TRY_NUMBER ]
 do
-   /bin/sh -c "${COMMAND}" && break
-   n=$((n+1)) 
-   sleep $SLEEP_TIME
+    /bin/sh -c "${COMMAND}" && break
+    n=$((n+1)) 
+    sleep $SLEEP_TIME
 done
 
