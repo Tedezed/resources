@@ -14,13 +14,13 @@ exit 2
 }
 
 while getopts ":s:t:c:h" OPTIONS; do
-        case "${OPTIONS}" in
-                s) SLEEP_TIME=${OPTARG} ;;
-                t) TRY_NUMBER=${OPTARG} ;;
-                c) COMMAND=${OPTARG} ;;
-                h) usage ;;
-                *) usage ;;
-        esac
+    case "${OPTIONS}" in
+        s) SLEEP_TIME=${OPTARG} ;;
+        t) TRY_NUMBER=${OPTARG} ;;
+        c) COMMAND=${OPTARG} ;;
+        h) usage ;;
+        *) usage ;;
+    esac
 done
 
 n=0
