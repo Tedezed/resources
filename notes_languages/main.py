@@ -1,6 +1,8 @@
 # Python 3.5.2
 # By Tedezed
 
+# http://elcursoinglesonline.blogspot.com
+
 import json, random
 
 def menu(mode, input_msg, input_list):
