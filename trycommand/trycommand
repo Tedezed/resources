@@ -26,7 +26,7 @@ done
 n=0
 until [ "$n" -ge $TRY_NUMBER ]
 do
-   eval $COMMAND && break
+   /bin/sh -c "${COMMAND}" && break
    n=$((n+1)) 
    sleep $SLEEP_TIME
 done
